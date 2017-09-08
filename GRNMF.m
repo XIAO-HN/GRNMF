@@ -40,7 +40,6 @@ L_d =diag_d -d_mat_new;
 
 fid = fopen( 'RunResult.txt','wt+');
 for step=1:iterate
-     % ===================== update A ========================
         YB = Y*B;
         BB =  B'*B;
         ABB = A*BB;        
@@ -51,8 +50,6 @@ for step=1:iterate
             ABB = ABB + lamda*A + lamda_m*DA;
         end
         A = A.*(YB./ABB);
-             
-        % ===================== update B ========================
         YA = Y'*A;
         AA = A'*A;
         BAA = B*AA;
@@ -64,7 +61,6 @@ for step=1:iterate
         end
         B = B.*(YA./BAA);
         
-      % ===================== update obj ========================
         dY = Y-A*B';
         obj_NMF = sum(sum(dY.^2));
         ABF = sum(sum(A.^2))+sum(sum(B.^2));
