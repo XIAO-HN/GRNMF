@@ -1,6 +1,5 @@
 function [ graph ] = Graph( network , name_list, p )
-% demo: [ d_graph_mat ] = Graph( DD_mat , diseases_list,p );
-%       [ m_graph_mat ] = Graph( MM_mat , miRNAs_list,p );
+
 tic    
 [rows, cols] = size( network );    
           
