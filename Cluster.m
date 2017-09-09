@@ -1,5 +1,4 @@
 function [ Cluster_D ] = Cluster( sim_mat,name_list)
-% demo: [ ClustermiRNAs ] = Cluster( MM_mat,miRNAs_list(:,2)); 
 
 dn = size(sim_mat,1);
 tnSim = size(dn,dn);
