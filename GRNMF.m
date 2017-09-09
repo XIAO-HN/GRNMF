@@ -76,7 +76,6 @@ for step=1:iterate
             fprintf('step=%d\n',step);
             break;
         end            
-
        
 end
 fclose(fid);
